@@ -1,0 +1,127 @@
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-equalizer font-blue-dark"></i>
+            <span class="caption-subject font-blue-dark uppercase">Manage LINODE Accounts </span>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form action="#" class="horizontal-form validate" method="POST">
+            <div class="form-body">
+                {if(isset($accounts) && count($accounts)>0)}
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label ips-label bold" map-index="{echo $row_i}" >API Account</label>
+                                    <select id="account-id" class="form-control domains-mapping" data-prev="{echo $row['account_name']}" map-index="{echo $row_i}">
+                                        <option value="">Select an Account ...</option>
+                                        {if(isset($accounts) && count($accounts)>0)}
+                                            {foreach $domain in $accounts}
+                                            <option value="{echo $domain['id']}" > {echo $domain['account_name']} </option>   
+                                            {/foreach}
+                                        {/if} 
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label ips-label bold" map-index="{echo $row_i}" >Region</label>
+                                    <select name="region" id="region" class="form-control domains-mapping">
+                                        <option value="">Select a Regions ...</option>
+                                        <option value="random">Random</option>
+                                        {if(isset($regions) && count($regions)>0)}
+                                            {foreach $region in $regions}
+                                            <option value="{echo $region}" > {echo $region} </option>   
+                                            {/foreach}
+                                        {/if} 
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label ips-label bold"  >OS</label>
+                                    <select name="os" id="os" class="form-control domains-mapping" >
+                                        <option value="">Select an OS ...</option>
+                                        {if(isset($images) && count($images)>0)}
+                                            {foreach $image in $images}
+                                            <option value="$image" > {echo $image} </option>   
+                                            {/foreach}
+                                        {/if} 
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label ips-label bold" >Type</label>
+                                    <select name="type" id="type" class="form-control domains-mapping" >
+                                        <option value="">Select a Type ...</option>
+                                        {if(isset($types) && count($types)>0)}
+                                            {foreach $type in $types}
+                                            <option value="{echo $type['id']}" > {echo $type['label']} </option>   
+                                            {/foreach}
+                                        {/if} 
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label ips-label bold"  >Authuntication Type</label>
+                                    <select name="auth-type" id="auth-type" class="form-control domains-mapping">
+                                        <option value="password">Password</option>
+                                        <option value="rsa-key">RSA-KEY</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Root Passowrd</label>
+                                    <input type="text" id="root-password" name="root-password" class="form-control" placeholder="Enter how many servers" data-required="true" data-validation-message="Servers count is Required !">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Number of servers</label>
+                                    <input type="text" id="servers-count" name="servers-count" class="form-control" placeholder="Enter how many servers" data-required="true" data-validation-message="Servers count is Required !">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label full-width">New Instances 
+                                        <a class="pull-right  deselect-all-options" title="Deselect all instances" href="javascript:;" data-target="available-vmtas" style="margin-left: 15px;"><i class="fa fa-ban"></i></a>
+                                        <a class="pull-right  select-all-options" title="Select all instances" href="javascript:;" data-target="available-vmtas" style="margin-left: 15px;"><i class="fa fa-list"></i></a>
+                                        <a class="pull-right" title="Refresh all instances" href="javascript:;"  style="margin-left: 15px;"><i class="fa fa-refresh"></i></a>
+                                        <a id="remove" class="pull-right" title="Remove instances" href="javascript:;"  style="margin-left: 15px;"><i class="fa fa-trash"></i></a>
+                                    </label> 
+                                    <select id="new-instances" class="form-control" multiple="multiple" style="height: 368px;">
+                                    </select>
+                                </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Test Emails : </label>
+                                    <input type="text" id="test-emails" name="test-email" class="form-control" placeholder="Enter the test emails">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">RDNS Domains </label>
+                                    <textarea class="form-control" style="height: 250px;" name="domains" id="domains" spellcheck="false"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <a href="javascript:;" id="generate-servers-form-submit" class="btn green-sharp"><i class="fa fa-terminal"></i> Generate servers !</a>
+                                    <a href="javascript:;" id="sendTest" class="btn blue-dark"><i class="fa fa-envelope"></i> Send Test !</a>
+                                    <a href="javascript:;" id="addServers" class="btn red-haze"><i class="fa fa-cc-amex"></i> Add Servers</a>
+                                    <a href="javascript:;" id="configureRdns" class="btn yellow"><i class="fa fa-chain"></i> Configure RDNS </a>
+                                </div>
+                            </div>
+                        </div> 
+                    {/if}
+                 
+            <div class="form-actions left">
+               
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>

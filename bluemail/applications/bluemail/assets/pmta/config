@@ -1,0 +1,500 @@
+############################################################################
+########################### PMTA domains config ############################
+############################################################################
+
+########## PMTA accounting files rules section
+
+# Bounces section
+<acct-file /etc/pmta/bounces/b.csv>
+    records b
+    record-fields bounce bounceCat,timeLogged,timeQueued,orig,dsnAction,dsnStatus,dsnDiag,vmta,jobId,envId,queue
+    move-to /etc/pmta/bounces/archived/
+    move-interval 2s
+    max-size 50M
+</acct-file>
+
+# Delivered section
+<acct-file /etc/pmta/delivered/d.csv>
+    records d
+    record-fields delivery bounceCat,timeLogged,timeQueued,orig,dsnAction,dsnStatus,dsnDiag,vmta,jobId,envId,queue
+    move-to /etc/pmta/delivered/archived/
+    move-interval 2s
+    max-size 50M
+</acct-file>
+
+# Deffered section
+<acct-file /etc/pmta/deffered/t.csv>
+    records t
+    record-fields transient bounceCat,timeLogged,timeQueued,orig,rcpt,dsnAction,dsnStatus,dsnDiag,vmta,jobId,envId,queue
+    move-interval 2m
+    delete-after never
+</acct-file>
+
+########## Bounce rules section
+<bounce-category-patterns>
+    /spam/ spam-related
+    /junk mail/ spam-related
+    /blacklist/ spam-related
+    /blocked/ spam-related
+    /\bU\.?C\.?E\.?\b/ spam-related
+    /\bAdv(ertisements?)?\b/ spam-related
+    /unsolicited/ spam-related
+    /\b(open)?RBL\b/ spam-related
+    /realtime blackhole/ spam-related
+    /http:\/\/basic.wirehub.nl\/blackholes.html/ spam-related
+    /\bvirus\b/ virus-related
+    /message +content/ content-related
+    /content +rejected/ content-related
+    /quota/ quota-issues
+    /limit exceeded/ quota-issues
+    /mailbox +(is +)?full/ quota-issues
+    /\bstorage\b/ quota-issues
+    /(user|mailbox|recipient|rcpt|local part|address|account|mail drop|ad(d?)ressee) (has|has been|is)? *(currently|temporarily +)?(disabled|expired|inactive|not activated)/ hardbnc
+    /(conta|usu.rio) inativ(a|o)/ hardbnc
+    /Too many (bad|invalid|unknown|illegal|unavailable) (user|mailbox|recipient|rcpt|local part|address|account|mail drop|ad(d?)ressee)/ other
+    /(No such|bad|invalid|unknown|illegal|unavailable) (local +)?(user|mailbox|recipient|rcpt|local part|address|account|mail drop|ad(d?)ressee)/ hardbnc
+    /(user|mailbox|recipient|rcpt|local part|address|account|mail drop|ad(d?)ressee) +(\S+@\S+ +)?(not (a +)?valid|not known|not here|not found|does not exist|bad|invalid|unknown|illegal|unavailable)/ hardbnc
+    /\S+@\S+ +(is +)?(not (a +)?valid|not known|not here|not found|does not exist|bad|invalid|unknown|illegal|unavailable)/ hardbnc
+    /no mailbox here by that name/ hardbnc
+    /my badrcptto list/ hardbnc
+    /not our customer/ hardbnc
+    /no longer (valid|available)/ hardbnc
+    /have a \S+ account/ hardbnc
+    /\brelay(ing)?/ relaying-issues
+    /domain (retired|bad|invalid|unknown|illegal|unavailable)/ hardbnc
+    /domain no longer in use/ hardbnc
+    /domain (\S+ +)?(is +)?obsolete/ hardbnc
+    /denied/ policy-related
+    /prohibit/ policy-related
+    /rejected/ policy-related
+    /refused/ policy-related
+    /allowed/ policy-related
+    /banned/ policy-related
+    /policy/ policy-related
+    /suspicious activity/ policy-related
+    /bad sequence/ protocol-errors
+    /syntax error/ protocol-errors
+    /\broute\b/ routing-errors
+    /\bunroutable\b/ routing-errors
+    /\bunrouteable\b/ routing-errors
+    /^2.\d.\d/ success
+    /^[45]\.1\.1/ hardbnc
+    /^[45]\.1\.2/ hardbnc
+    /^[45]\.3\.5/ bad-configuration
+    /^[45]\.4\.1/ no-answer-from-host
+    /^[45]\.4\.2/ bad-connection
+    /^[45]\.4\.4/ routing-errors
+    /^[45]\.4\.6/ routing-errors
+    /^[45]\.4\.7/ message-expired
+    /^[45]\.7\.1/ policy-related
+    // other    # catch-all
+</bounce-category-patterns>
+
+########## Hosts configuration section
+$_HOST
+
+########## HTTP configuration section
+http-access 0/0 monitor
+http-access 127.0.0.1 monitor
+http-access ::1 monitor
+http-mgmt-port $_PORT
+run-as-root no
+
+########## PMTA log file location section
+log-file /var/log/pmta/pmta.log 
+
+########## PMTA mails process format reading folders section
+pickup /var/spool/bluemail/pickup/ /var/spool/bluemail/bad/
+pickup-retry-interval 5s
+
+<source {pickup}>
+    process-x-virtual-mta yes
+    process-x-envid yes
+    process-x-job yes
+    add-received-header no
+    remove-header parameters
+</source>
+
+########## Sources IP address section
+<source 127.0.0.1>
+    always-allow-relaying yes
+    process-x-virtual-mta yes
+    max-message-size unlimited
+    smtp-service yes
+    allow-mailmerge yes 
+    log-connections yes
+    log-commands yes  	
+    log-data yes  
+</source>
+
+<source 0/0> 
+    log-connections yes
+    log-commands yes 
+    log-data yes  
+</source>
+
+########## SMTP listners section
+smtp-listener 0/0:2025  
+
+########## PMTA Spool section
+<spool /var/spool/pmta>
+    deliver-only no
+</spool>
+
+########## Default Virtual MTAs section
+$_VMTAS
+
+########## Customized Virtual MTAs section
+include /etc/pmta/vmtas/*.conf
+
+########## ISPs configuration section
+
+# Hotmail Settings
+<smtp-pattern-list hotmail-errors>
+    reply /exceeded the rate limit/ mode=backoff
+    reply /exceeded the connection limit/ mode=backoff
+    reply /Mail rejected by Windows Live Hotmail for policy reasons/ mode=backoff
+    reply /mail.live.com\/mail\/troubleshooting.aspx/ mode=backoff
+    reply /Please try again/ mode=backoff
+</smtp-pattern-list>
+
+domain-macro hotmail hotmail.be,hotmail.ch,hotmail.co.id,hotmail.co.il,hotmail.co.jp,hotmail.co.kr,hotmail.co.nz,hotmail.co.th,hotmail.co.za,hotmail.com,hotmail.com.ar,hotmail.com.au,hotmail.com.br,hotmail.com.hk,hotmail.com.tr,hotmail.com.tw,hotmail.com.vn,hotmail.cz,hotmail.de,hotmail.dk,hotmail.es,hotmail.fi,hotmail.fr,hotmail.gr,hotmail.it,hotmail.my,hotmail.no,hotmail.ph,hotmail.rs,hotmail.se,hotmail.sg,live.at,live.be,live.ca,live.cl,live.cn,live.co.kr,live.co.uk,live.co.za,live.com,live.com.ar,live.com.au,live.com.my,live.com.ph,live.com.pt,live.com.sg,live.de,live.dk,live.fr,live.hk,live.ie,live.in,live.it,live.jp,live.nl,live.no,live.ru,live.se,livemail.tw,msn.com
+
+<domain hotmail.queue>
+    max-smtp-out 1000
+    max-msg-per-connection 100
+    max-msg-rate 2500/s
+    max-connect-rate 2/s
+    smtp-421-means-mx-unavailable yes
+    smtp-pattern-list hotmail-errors
+    retry-after 1s
+    backoff-retry-after 1s
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 10000/h
+    route hotmail.com
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $hotmail>
+  queue-to "hotmail.queue"
+</domain>
+
+domain-macro hotmailjp hotmail.jp
+
+<domain hotmailjp.queue>
+    max-smtp-out 20
+    max-msg-per-connection 100
+    max-msg-rate 2500/m
+    max-connect-rate 2/s
+    smtp-421-means-mx-unavailable yes
+    smtp-pattern-list hotmail-errors
+    retry-after 1m
+    backoff-retry-after 2m
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 10000/h
+    route hotmail.jp
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $hotmailjp>
+  queue-to "hotmailjp.queue"
+</domain>
+
+domain-macro hotmailuk hotmail.co.uk
+
+<domain hotmailuk.queue>
+    max-smtp-out 20
+    max-msg-per-connection 100
+    max-msg-rate 2500/m
+    max-connect-rate 2/s
+    smtp-421-means-mx-unavailable yes
+    smtp-pattern-list hotmail-errors
+    retry-after 1m
+    backoff-retry-after 2m
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 10000/h
+    route hotmail.co.uk
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $hotmailuk>
+  queue-to "hotmailuk.queue"
+</domain>
+
+domain-macro hotmailch msn.cn
+
+<domain hotmailch.queue>
+    max-smtp-out 20
+    max-msg-per-connection 100
+    max-msg-rate 2500/m
+    max-connect-rate 2/s
+    smtp-421-means-mx-unavailable yes
+    smtp-pattern-list hotmail-errors
+    retry-after 1m
+    backoff-retry-after 2m
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 10000/h
+    route msn.cn
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $hotmailch>
+  queue-to "hotmailch.queue"
+</domain>
+
+
+# Gmail Settings
+<smtp-pattern-list gmail-errors>
+    reply /has been temporarily blocked/ mode=backoff
+</smtp-pattern-list>
+
+<domain gmail.com>
+    max-smtp-out 1200
+    max-msg-per-connection 20
+    smtp-pattern-list gmail-errors
+    retry-after 5m
+    backoff-retry-after 2m
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 10000/h
+    route gmail.com
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+
+# Yahoo Settings
+<smtp-pattern-list yahoo-errors>
+    reply /\[TS03\]/ mode=backoff
+    reply /\[TS02\]/ mode=backoff
+    reply /\[TS01\]/ mode=backoff
+</smtp-pattern-list>
+
+domain-macro yahoo yahoo.com
+
+<domain yahoo.queue>
+    max-smtp-out 1000 
+    max-msg-per-connection 1000 
+    smtp-pattern-list yahoo-errors
+    retry-after 10s
+    backoff-retry-after 10s
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 100000/h
+    route yahoo.com
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $yahoo>
+queue-to "yahoo.queue"
+</domain>
+
+domain-macro yahooeu yahoo.co.uk,yahoo.de,yahoo.dk,yahoo.fr,yahoo.gr,yahoo.it,yahoo.no,yahoo.pl,yahoo.se
+
+<domain yahooeu.queue>
+    max-smtp-out 1000
+    max-msg-per-connection 1000
+    smtp-pattern-list yahoo-errors
+    retry-after 10s
+    backoff-retry-after 10m
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 10000/h
+    route yahoo.co.uk
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $yahooeu>
+  queue-to "yahooeu.queue"
+</domain>
+
+domain-macro yahooam 
+rocketmail.com,y7mail.com,yahoo.ca,yahoo.cl,yahoo.co.nz,yahoo.com.ar,yahoo.com.au,yahoo.com.br,yahoo.com.co,yahoo.com.mx,yahoo.com.pe,yahoo.com.tr,yahoo.com.ve,ymail.com
+
+<domain yahooam.queue>
+    max-smtp-out 1000
+    max-msg-per-connection 1000
+    smtp-pattern-list yahoo-errors
+    retry-after 10s
+    backoff-retry-after 10m
+    backoff-to-normal-after-delivery 	true
+    backoff-max-msg-rate 10000/h
+    route yahoo.ca
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $yahooam>
+  queue-to "yahooam.queue"
+</domain>
+
+domain-macro yahooas yahoo.com.my,yahoo.com.ph,yahoo.com.sg,yahoo.co.th,yahoo.co.id,yahoo.co.in,yahoo.com.vn,yahoo.in
+
+<domain yahooas.queue>
+    max-smtp-out 1000
+    max-msg-per-connection 1000
+    smtp-pattern-list yahoo-errors
+    retry-after 10s
+    backoff-retry-after 10m
+    backoff-to-normal-after-delivery 	true
+    backoff-max-msg-rate 10000/h
+    route yahoo.in
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $yahooas>
+  queue-to "yahooas.queue"
+</domain>
+
+
+# Aol Settings
+<smtp-pattern-list aol-errors>
+    reply /421 .* SERVICE NOT AVAILABLE/ mode=backoff
+    reply /generating high volumes of.* complaints from AOL/ mode=backoff
+    reply /554 .*aol.com/ mode=backoff
+    reply /421dynt1/ mode=backoff
+    reply /HVU:B1/ mode=backoff
+    reply /DNS:NR/ mode=backoff
+    reply /RLY:NW/ mode=backoff
+    reply /DYN:T1/ mode=backoff
+    reply /RLY:BD/ mode=backoff
+    reply /RLY:CH2/ mode=backoff
+</smtp-pattern-list>
+
+domain-macro aol 
+aim.com,aol.at,aol.be,aol.ch,aol.cl,aol.co.nz,aol.co.uk,aol.com,aol.com.ar,aol.com.au,aol.com.br,aol.com.co,aol.com.tr,aol.com.ve,aol.cz,aol.de,aol.dk,aol.es,aol.fi,aol.fr,aol.hk,aol.in,aol.it,aol.jp,aol.kr,aol.nl,aol.pl,aol.ru,aol.se,aol.tw,aolchina.com,aolnorge.no,aolpolska.pl,luckymail.com,wmconnect.com,cs.com,myaol.jp
+
+<domain aol.queue>
+   route aol.com
+   dk-sign yes
+   dkim-sign yes
+   log-transfer-failures no
+   log-connections no
+   log-commands no
+   retry-after 2m
+   max-smtp-out 20
+   max-msg-per-connection 50
+   smtp-pattern-list aol-errors
+</domain>
+
+<domain $aol>
+  queue-to "aol.queue"
+</domain>
+
+domain-macro aoljp aol.co.jp
+
+<domain aoljp.queue>
+    max-smtp-out 1200
+    max-msg-per-connection 450
+    smtp-pattern-list aol-errors
+    retry-after 5m
+    backoff-retry-after 2m
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 10000/h
+    route aol.co.jp
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+<domain $aoljp>
+  queue-to "aoljp.queue"
+</domain>
+
+
+# Comcast Settings
+<domain comcast.net>
+    max-smtp-out 25
+    max-msg-per-connection 1000
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+
+# Cox Settings
+<domain cox.net>
+    max-smtp-out 5
+    max-msg-per-connection 100
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+
+# ATT Settings
+<domain att.net>
+    max-smtp-out 10
+    max-msg-per-connection 100
+    dk-sign  yes
+    dkim-sign yes
+</domain>
+
+
+# Verizon Settings
+<domain verizon.net>
+    max-smtp-out 150
+    max-msg-per-connection 100
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+
+# Earthlink Settings
+<domain earthlink.net>
+    max-smtp-out 150
+    max-msg-per-connection 100
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+
+# Bellsouth Settings
+<domain bellsouth.net>
+    max-smtp-out 150
+    max-msg-per-connection 100
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+# SBCGlobal Settings
+<smtp-pattern-list Sbcglobal-errors>
+    #reply /\[140\]/ mode=backoff
+    #reply /\[160\]/ mode=backoff
+    reply /\[MC02\]/ mode=backoff
+    reply /\[GL01\]/ mode=backoff
+    reply /\[TS03\]/ mode=backoff
+    reply /\[TS02\]/ mode=backoff
+    reply /\[TS01\]/ mode=backoff
+    #reply /421 .* Please try again later/ mode=backoff
+    reply /421 Message temporarily deferred/ mode=backoff
+    #reply /VS3-IP5 Excessive unknown recipients/ mode=backoff
+    #reply /VSS-IP Excessive unknown recipients/ mode=backoff
+</smtp-pattern-list>
+
+<domain sbcglobal.net>
+    max-smtp-out 1200
+    max-msg-per-connection 1000
+    smtp-pattern-list sbcglobal-errors
+    backoff-retry-after 2m
+    backoff-to-normal-after-delivery true
+    backoff-max-msg-rate 100000/h
+    retry-after 2m
+    route sbcglobal.net
+    dk-sign yes
+    dkim-sign yes
+</domain>
+
+# General Settings
+<domain *>
+    max-smtp-out 20
+    max-rcpt-per-message 100
+    bounce-after 4d12h    
+    retry-after 5m 
+    log-connections yes
+    log-commands no
+    log-transfer-failures yes
+    deliver-local-dsn no
+</domain>
+

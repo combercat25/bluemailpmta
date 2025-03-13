@@ -1,0 +1,99 @@
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-equalizer font-blue-dark"></i>
+            <span class="caption-subject font-blue-dark uppercase">Add New API ACCOUNT</span>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form action="{echo $app['app_url']}/accountapi/save.html" class="horizontal-form validate" method="POST">
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Account Name *</label>
+                            <input type="text" name="account-name" value="{echo $ServerApis['account_name']}" class="form-control" placeholder="Enter Account Name" data-required="true" data-validation-message="Account name is Required !">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Status</label>
+                            <select class="form-control bs-select" title="Select a Status ..."  name="status-id" data-required="true" data-validation-message="ISP status is Required !" >
+                                {if(isset($status) && count($status)>0)}
+                                    {foreach $row in $status}
+                                        <option value="{echo $row['id']}" {if(strtolower($row['name']) == 'activated')} selected {/if}>{echo $row['name']}</option>
+                                    {/foreach}
+                                {/if}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Username</label>
+                            <input type="text" value="{echo $ServerApis['username']}" name="api-user-name" class="form-control" placeholder="Enter Account username" >
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <input type="text" value="{echo $ServerApis['password']}" name="api-user-pass" class="form-control" placeholder="Enter Account password" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">API URL</label>
+                            <input type="text" value="{echo $ServerApis['api_url']}" name="api-url" class="form-control" placeholder="Enter API URL">
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">API KEY *</label>
+                            <input type="text" value="{echo $ServerApis['api_key']}" name="api-key" class="form-control" placeholder="Enter API key" data-required="true" data-validation-message="API KEY is Required !">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">SSH KEY</label>
+                            <input type="text" value="{echo $ServerApis['ssh_key']}" name="ssh-key" class="form-control" placeholder="Enter SSH Key" >
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">API PROVIDER *</label>
+                            <select class="form-control bs-select" title="Select a Provider ..."  name="provider" data-required="true" data-validation-message="Provider is Required !" >
+                                <option value="linode" {if(strtolower($ServerApis['api_provider']) == 'linode')} selected {/if}> LINODE</option>
+                                <option value="Digital" {if(strtolower($ServerApis['api_provider']) == 'digital')} selected {/if}> DIGITAL OCEON</option>
+                                <option value="Amazon" {if(strtolower($ServerApis['api_provider']) == 'amazon')} selected {/if}> AMAZON</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Access Key</label>
+                            <input type="text" value="{echo $ServerApis['access_key']}" name="access-key" class="form-control" placeholder="Enter SSH Key" >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Secret KEy</label>
+                            <input type="text" value="{echo $ServerApis['secret_key']}" name="secret-key" class="form-control" placeholder="Enter SSH Key" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions right">
+                <button type="submit" class="btn blue-dark"><i class="fa fa-check"></i> Save</button>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>

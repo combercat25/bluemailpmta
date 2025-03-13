@@ -1,0 +1,86 @@
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-equalizer font-blue-dark"></i> 
+            <span class="caption-subject font-blue-dark uppercase">Install Large Servers ...</span>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form id="prepare-instalation-form-large" action="{echo $app['app_url']}/servers/large/" class="horizontal-form" method="POST">
+            <div class="form-body">
+                <div class="note note-info">
+                    <h4 class="block">Info! How it Works</h4>
+                    <p> 
+                        Insert the IPs on the first column
+                        <br/>
+                        Insert the domains on the second column
+                        <br/>
+                        Insert the sub-domains on the second column
+                        <br/><br/>
+                        PS : max IPs for a dmonan and sub subdomains = 50 . 49 sub domains and 1 main domain.
+                        
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Servers List</label>
+                                    <select id="server-id" class="form-control bs-select" name="server-id" title="Select Servers ...">
+                                        {if(isset($serverProviders) && count($serverProviders)>0)}
+                                            {foreach $provider in $serverProviders}
+                                                <optgroup label="{echo $provider['name']}">
+                                                    {if(isset($servers) && count($servers)>0)}
+                                                        {foreach $row in $servers}
+                                                            {if($row['provider_id'] == $provider['id'])}
+                                                                <option value="{echo $row['id']}">{echo $row['name']}</option>
+                                                            {/if}
+                                                        {/foreach}
+                                                    {/if} 
+                                                </optgroup>
+                                            {/foreach}
+                                        {/if}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">IPs List </label>
+                            <textarea class="form-control" style="height: 300px;" name="ips" id="ips" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Domains </label>
+                            <textarea class="form-control" style="height: 300px;" name="domains" id="domains" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Sub Domains </label>
+                            <textarea class="form-control" style="height: 300px;" name="subdomains" id="subdomains" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions left">
+                <a href="javascript:;" id="instalation-form-large-submit" class="btn blue-dark"><i class="fa fa-terminal"></i> Proceed Instalation</a>
+            </div>
+            <input type="submit" name="Install" value="Install" />
+        </form>
+        <!-- END FORM-->
+        <div id="installation-wrapper" style="display: none"> 
+            <h4>Installing ...  <span id="installation-status"><i class="fa fa-spinner fa-spin"></i></span></h4><br/>
+            <h5>Installation Log :</h5>
+            <div id="installation-proccess" class="scroller" style="height:200px;background: #eee !important;color:#555;font-family: monospace;border: 1px #ccc solid" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#555">
+
+            </div>
+        </div>
+    </div>
+</div>

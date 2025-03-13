@@ -1,0 +1,200 @@
+[20/09/2018:09:12:12] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[20/09/2018:09:18:01] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[20/09/2018:09:36:55] [error] : SQLSTATE[3F000]: Invalid schema name: 7 ERROR: schema "gmail" does not exist in : /var/bluemail/mfw/database/Connector.php at line : 426
+[20/09/2018:09:37:05] [error] : SQLSTATE[3F000]: Invalid schema name: 7 ERROR: schema "gmail" does not exist in : /var/bluemail/mfw/database/Connector.php at line : 426
+[20/09/2018:09:40:29] [error] : SQLSTATE[3F000]: Invalid schema name: 7 ERROR: schema "gmail" does not exist in : /var/bluemail/mfw/database/Connector.php at line : 426
+[20/09/2018:09:40:33] [error] : SQLSTATE[3F000]: Invalid schema name: 7 ERROR: schema "gmail" does not exist in : /var/bluemail/mfw/database/Connector.php at line : 426
+[20/09/2018:11:02:00] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[03/03/2021:21:18:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[03/03/2021:21:33:37] [error] : SQLSTATE[08006] [7] could not connect to server: Connection refused Is the server running on host "localhost" (127.0.0.1) and accepting TCP/IP connections on port 5432? in : /var/bluemail/mfw/database/Connector.php at line : 240
+[03/03/2021:21:37:35] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[03/03/2021:22:08:10] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[03/03/2021:22:11:06] [error] : Action add_manual not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[03/03/2021:22:11:06] [error] : Action add_manual not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[03/03/2021:22:29:14] [error] : Action add_manual not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[03/03/2021:22:33:01] [error] : Action add_manual not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[03/03/2021:22:53:15] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[03/03/2021:23:56:06] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:03:18:00] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:03:18:01] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:03:18:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:04:16:24] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:04:16:30] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:04:16:36] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:04:16:36] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:04:24:16] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:05:53:14] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:12:12] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:12:12] [error] : Action jsonws not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[04/03/2021:06:12:12] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:12:12] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:12:13] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:12:13] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:12:14] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:12:14] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:22:11] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:22:17] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:22:23] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:22:25] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:06:22:29] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:09:26:26] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:10:04:39] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:10:04:44] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:10:04:50] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:10:04:50] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:10:26:46] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:10:44:35] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:12:42:12] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:12:42:13] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:12:42:13] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:12:42:14] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:12:42:14] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:12:42:15] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:12:42:16] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:09:25] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:12:27] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:12:28] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:12:29] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:12:30] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:12:30] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:12:31] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:13:12:32] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:14:14:56] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:14:15:04] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:14:15:10] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:14:15:11] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:14:25:48] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:17:12:39] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:17:12:45] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:17:12:51] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:17:12:54] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:18:52:42] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:18:52:43] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:20:12:17] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:21:15:21] [error] : Action deleteMultiple not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[04/03/2021:21:20:57] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:21:20:58] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:21:25:39] [error] : Action add_manual not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[04/03/2021:21:34:18] [error] : Action add_manual not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[04/03/2021:21:55:27] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:21:55:32] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:21:55:38] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:21:55:38] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:22:41:14] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:23:37:15] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:23:37:15] [error] : Action jsonws not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[04/03/2021:23:37:15] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:23:37:15] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:23:37:16] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:23:37:17] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:23:37:17] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[04/03/2021:23:37:18] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:02:49:51] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:03:02:11] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:03:06:24] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:03:06:25] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:05:27:14] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:06:12:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:06:12:21] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:06:22:08] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:07:53:19] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:08:18:20] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:08:20:34] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:10:04:31] [error] : filesize(): stat failed for /var/bluemail/tmp/logs/debug.log in : /var/bluemail/mfw/logging/Logger.php at line : 77
+[05/03/2021:11:10:10] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(76) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:11:17:24] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(172) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:12:01:18] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(10458) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:12:09:11] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(263) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:12:14:17] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(7507) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:13:22:44] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(4492) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:13:30:17] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(25297) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:13:32:25] [error] : Action commands not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[05/03/2021:13:38:26] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(25071) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:13:58:40] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_unsubscribers_eu_orange_1_1" DETAIL: Key (id)=(25417) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:10:45] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(12832) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:12:22] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(5393) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:13:52] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(2028) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:23:40] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(25098) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:31:57] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(26173) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:40:05] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(10478) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:48:27] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(5852) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:14:54:28] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(75463) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:15:14:14] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(27117) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:15:21:37] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(25380) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:15:54:53] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:16:01:46] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(25861) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:16:05:16] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:16:05:18] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:16:08:11] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_unsubscribers_eu_orange_1_2" DETAIL: Key (id)=(60) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:16:13:20] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(75854) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:16:30:57] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(77439) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:16:39:24] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(5196) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:16:40:02] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(5163) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:16:45:57] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(5326) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:16:59:28] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(77461) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:17:38:21] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:17:38:21] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:17:40:57] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(75090) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:18:26:29] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(3983) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:18:48:03] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:19:00:45] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(12211) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:19:14:05] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(3929) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:20:03:27] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:03:27] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:03:28] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:03:28] [error] : Action jsonws not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[05/03/2021:20:03:28] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:03:28] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:03:29] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:03:29] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:11:48] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:11:59] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:20:13:49] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(26917) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:20:15:50] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:21:34:12] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(33) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[05/03/2021:21:59:59] [error] : filesize(): stat failed for /var/bluemail/tmp/logs/debug.log in : /var/bluemail/mfw/logging/Logger.php at line : 77
+[05/03/2021:22:00:50] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:22:00:51] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:22:00:51] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:22:00:52] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:22:00:52] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:22:00:53] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:22:00:53] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[05/03/2021:22:12:07] [error] : Action add_manual not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[06/03/2021:00:38:30] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:00:38:30] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:00:54:56] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:01:24:55] [error] : filesize(): stat failed for /var/bluemail/tmp/logs/debug.log in : /var/bluemail/mfw/logging/Logger.php at line : 77
+[06/03/2021:01:33:48] [error] : filesize(): stat failed for /var/bluemail/tmp/logs/debug.log in : /var/bluemail/mfw/logging/Logger.php at line : 77
+[06/03/2021:01:39:17] [error] : filesize(): stat failed for /var/bluemail/tmp/logs/debug.log in : /var/bluemail/mfw/logging/Logger.php at line : 77
+[06/03/2021:03:31:57] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:04:40:12] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:05:37:54] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:05:53:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:01] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:01] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:02] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:03] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:06:46:03] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:07:39:48] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(4661) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[06/03/2021:08:28:46] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:09:25:43] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(1461) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[06/03/2021:10:54:13] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_1" DETAIL: Key (id)=(25507) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426
+[06/03/2021:11:12:34] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:12:34] [error] : Action jsonws not found in : /var/bluemail/mfw/routing/Router.php at line : 199
+[06/03/2021:11:12:34] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:12:35] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:12:36] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:12:36] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:12:36] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:12:37] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:35:57] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:36:04] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:36:09] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:36:12] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:11:44:04] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:12:00:59] [error] : Page Not Found in : /var/bluemail/mfw/routing/Router.php at line : 186
+[06/03/2021:13:08:28] [error] : SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "c_pk_id_openers_eu_orange_1_2" DETAIL: Key (id)=(7001) already exists. in : /var/bluemail/mfw/database/Connector.php at line : 426

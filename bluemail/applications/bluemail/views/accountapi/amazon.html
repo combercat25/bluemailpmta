@@ -1,0 +1,58 @@
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-equalizer font-blue-hoki"></i>
+            <span class="caption-subject font-blue-hoki uppercase">Manage Amazon EC2 Instances ... </span></span>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form id="prepare-instalation-form" action="#" class="horizontal-form">
+            <div class="form-body">
+                <input type="hidden" id="server-version" value="{echo $version}"/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="form-section">Server Master </h4>
+                        <select id="server-id" class="form-control" multiple="multiple"  style="height: 240px;">
+                            {if(isset($servers) && count($servers)>0)}
+                                {foreach $row in $servers}
+                                    <option value="{echo $row['id']} ">{echo $row['name']}</option>
+                                {/foreach}
+                            {/if}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <h4 class="form-section">Servers IDs </h4>
+                            <textarea class="form-control" style="height: 250px;" name="ids" id="ids" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                     <div class="col-md-3">
+                        <div class="form-group">
+                            <h4 class="form-section">Time Mills </h4>
+                            <input type="text" id="timeRepeat" class="form-control" placeholder="Enter Time Action repeat " data-required="true" >
+                        
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <a href="javascript:;" id="stop-instances" class="btn green-sharp"><i class="fa fa-stop"></i> STOP </a>
+                <a href="javascript:;" id="start-instances" class="btn blue-madison"><i class="fa fa-play"></i> START </a>
+                <a href="javascript:;" id="repeat-action" class="btn red-haze"><i class="fa fa-refresh"></i> Repeat </a>
+                <a href="javascript:;" id="repeat-action-stop" class="btn yellow"><i class="fa fa-stop"></i> Stop Repeat </a>
+            </div>
+            
+        </form>
+        <!-- END FORM-->
+        <div id="installation-wrapper" style="display: none">
+            <h4>Instances Status ... <span id="installation-status"><i class="fa fa-spinner fa-spin"></i></span></h4><br/>
+            <h5>Installation Log :</h5>
+            <div id="status" class="scroller" style="height:200px;background: #eee !important;color:#555;font-family: monospace;border: 1px #ccc solid" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#555">
+
+            </div>
+        </div>
+    </div>
+</div>

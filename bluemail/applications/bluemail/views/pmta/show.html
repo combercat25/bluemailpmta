@@ -1,0 +1,45 @@
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-equalizer font-blue-dark"></i>
+            <span class="caption-subject font-blue-dark uppercase">Show PMTA Monitors</span>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form id="manage-pmta" action="#" class="horizontal-form" method="POST">
+            <input type="hidden" id="pmta-port" value="{echo $pmtaPort}" />
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                Servers 
+                            </label>
+                            <select id="pmta-servers" name="servers[]" class="bs-select form-control" multiple data-actions-box="true" placeholder="Select Servers" data-live-search="true"> 
+                                {if(isset($serverProviders) && count($serverProviders)>0)}
+                                    {foreach $provider in $serverProviders}
+                                        <optgroup label="{echo $provider['name']}">
+                                            {if(isset($servers) && count($servers)>0)}
+                                                {foreach $row in $servers}
+                                                    {if($row['provider_id'] == $provider['id'])}
+                                                        <option value="{echo $row['id']}" data-main-ip="{echo $row['main_ip']}">{echo $row['name']}</option>
+                                                    {/if}
+                                                {/foreach}
+                                            {/if}
+                                        </optgroup>
+                                    {/foreach}
+                                {/if}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+        <div class="row" id="pmtas">
+            
+            
+        </div>
+    </div>
+</div>

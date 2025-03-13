@@ -1,0 +1,35 @@
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-equalizer font-blue-dark"></i>
+            <span class="caption-subject font-blue-dark uppercase">Edit VMTA ...</span>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form id="prepare-instalation-form-large" action="#" class="horizontal-form">
+            <div class="form-body">
+                <input type="hidden" name="server-id" value="{echo $server['id']}">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">VMTA Content</label>
+                            <textarea class="form-control" style="height: 300px;" name="vmtaContent" spellcheck="false"></textarea>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions left">
+                <a href="javascript:;" id="instalation-form-large-submit" class="btn blue-dark"><i class="fa fa-terminal"></i> Proceed Instalation</a>
+            </div>
+        </form>
+        <!-- END FORM-->
+        <div id="installation-wrapper" style="display: none"> 
+            <h4>Installing ...  <span id="installation-status"><i class="fa fa-spinner fa-spin"></i></span></h4><br/>
+            <h5>Installation Log :</h5>
+            <div id="installation-proccess" class="scroller" style="height:200px;background: #eee !important;color:#555;font-family: monospace;border: 1px #ccc solid" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#555">
+
+            </div>
+        </div>
+    </div>
+</div>
